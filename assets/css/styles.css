@@ -43,7 +43,7 @@ header a {
 
 }
 header nav {
-    margin: 20px 0;
+    margin: 15px 0;
     color: var(--primary-color);
     text-decoration: underline;
 }
@@ -97,7 +97,6 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: right;
-    padding: 10px 100px;
 }
 div section {
     display: flex;
@@ -116,7 +115,13 @@ div section {
     justify-content: space-evenly;
 }
 
-.right-half a {
+.runbuddy a {
+    font-weight: lighter;
+    font-size: 1.6vw;
+    /* align-items: center; */
+}
+
+.contacts a {
     font-weight: lighter;
     font-size: 1.6vw;
     justify-content: space-evenly;
@@ -144,10 +149,12 @@ div img {
 
 .work-img {
     position: relative;
+    width: 100%;
 }
 
 .work-img img {
     filter: grayscale(.5);
+    width: 67%;
 }
 
 .work-img img:hover {
@@ -162,17 +169,81 @@ div img {
     width: 200px;
 }
 .text-img h3, .text-img span {
-    margin: 20px 30px;
+    margin: 10px 30px;
 }
 
 #run-buddy {
     margin-left:20px;
 }
-/*#contact-me a {
-    font-weight: lighter;
-    font-size: 1.6vw;
-    s
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    header nav ul li a {
+        font-size: 20px;
+    }
+    .hero-cta, .hero-form {
+        width: 100%;
+    }
+      
+    .hero-cta {
+        text-align: center;
+    }
+    #content {
+        width: 100%;
+    }
+    div section{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .right-half {
+        border-left: none;
+        border-top: 2px solid var(--tertiary-color);
+    }
+    div section h2{
+        width: 100%;
+        text-align: center;
+    }
+    .contacts a {
+        font-size: 2.6vw;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    .work-img {
+        width: 100%;
+    }
+    .work-img img {
+        width: 100%;
+    }
+    
+}
+    /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    
+    .about-me p {
+        width: 100%;
+    }
+
+    .contacts a {
+        font-size: 4.6vw;
+    }
+    
 }
