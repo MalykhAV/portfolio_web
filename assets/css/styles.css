@@ -10,10 +10,11 @@
     --tertiary-color: #0c0032;
 }
 body {
-    /* more on this crazy alphanumerical value in a minute! */
     color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 }
+
+/* Apply styles to Header */
 header {
     background-color: var(--tertiary-color);
     display: flex;
@@ -93,6 +94,9 @@ header nav ul li a:hover {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 2px;
 }
+/* Hero styles end */
+
+/* Content styles start */
 #content {
     display: flex;
     flex-direction: column;
@@ -115,18 +119,20 @@ div section {
     justify-content: space-evenly;
 }
 
+#about-me {
+    padding-top: 50px;
+}
+
 .runbuddy a {
     font-weight: lighter;
     font-size: 1.6vw;
-    /* align-items: center; */
 }
 
-.contacts a {
+#contact-me a {
     font-weight: lighter;
     font-size: 1.6vw;
     justify-content: space-evenly;
     margin: 10px 20px;
-    /* align-items: center; */
 }
 
 div section h2 {
@@ -175,6 +181,7 @@ div img {
 #run-buddy {
     margin-left:20px;
 }
+/* Content styles END */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
@@ -220,7 +227,7 @@ div img {
         width: 100%;
         text-align: center;
     }
-    .contacts a {
+    #contact-me a {
         font-size: 2.6vw;
     }
 }
@@ -233,7 +240,10 @@ div img {
     .work-img img {
         width: 100%;
     }
-    
+    #run-buddy {
+        margin-left: 1px;
+    }
+  
 }
     /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
@@ -242,8 +252,8 @@ div img {
         width: 100%;
     }
 
-    .contacts a {
+    #contact-me a {
         font-size: 4.6vw;
     }
-    
+ 
 }
